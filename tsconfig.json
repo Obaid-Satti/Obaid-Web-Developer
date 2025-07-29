@@ -26,6 +26,7 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["**/*.ts", "**/*.tsx"],
+  "include": ["src"],                // ✅ Include only source files
+  "exclude": ["vite.config.ts"],     // ✅ Exclude Vite config from build
   "references": [{ "path": "./tsconfig.node.json" }]
 }
