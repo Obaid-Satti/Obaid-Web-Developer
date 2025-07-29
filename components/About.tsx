@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Card, CardContent } from './ui/card';
 import { ImageWithFallback } from './figma/ImageWithFallback';
-
+import dp from '../src/assets/dp.jpg'
 export default function About() {
   const [hoveredStat, setHoveredStat] = useState<number | null>(null);
 
@@ -152,7 +152,7 @@ export default function About() {
                   <div className="absolute inset-0 bg-gradient-to-r from-blue-500 via-purple-500 to-cyan-500 rounded-full p-1 animate-spin-slow">
                     <div className="w-full h-full bg-white dark:bg-slate-800 rounded-full overflow-hidden">
                       <ImageWithFallback
-                        src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80"
+                        src={dp}
                         alt="Obaid Saleem - Full Stack Developer"
                         className="w-full h-full object-cover"
                       />
