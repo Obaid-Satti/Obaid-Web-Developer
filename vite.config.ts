@@ -9,7 +9,7 @@ const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 
 export default defineConfig({
-  base: '',  // 👈 VERY IMPORTANT for GitHub Pages
+  base: '/Obaid.dev/',  // 👈 VERY IMPORTANT for GitHub Pages
   plugins: [
     react(),
     tailwindcss(),

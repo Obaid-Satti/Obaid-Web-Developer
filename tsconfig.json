@@ -23,12 +23,10 @@
     /* Path mapping */
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./*"]
+      "@/*": ["src/*", "components/*"]
     }
   },
-  "include": ["src", "components"]//or the actual relative path outside src
-
-,                // ✅ Include only source files
-  "exclude": ["vite.config.ts"],     // ✅ Exclude Vite config from build
+  "include": ["src", "components"],       // ✅ Include both folders
+  "exclude": ["vite.config.ts"],          // ✅ Exclude config file
   "references": [{ "path": "./tsconfig.node.json" }]
 }

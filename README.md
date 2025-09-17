@@ -21,7 +21,3 @@ Make sure you have the following installed:
 
 ### Installation
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/Obaid-Satti/Obaid.dev.git
-   cd Obaid.dev
