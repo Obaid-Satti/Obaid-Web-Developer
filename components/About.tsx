@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
+
 import { Card, CardContent } from './ui/card';
 import { ImageWithFallback } from './Image/ImageWithFallback';
 import dp from '../src/assets/dp.jpg'

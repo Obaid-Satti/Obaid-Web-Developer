@@ -1,12 +1,25 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 import { Badge } from './ui/badge';
 
+interface Skill {
+  name: string;
+  level: number;
+  icon: string;
+  description: string;
+}
+
+interface Category {
+  title: string;
+  icon: string;
+  color: string;
+  skills: Skill[];
+}
+
 export default function Skills() {
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
-  const [hoveredSkill, setHoveredSkill] = useState<string | null>(null);
 
-  const skillCategories = {
+  const skillCategories: Record<string, Category> = {
     frontend: {
       title: 'Frontend Development',
       icon: '🎨',
@@ -26,11 +39,10 @@ export default function Skills() {
       color: 'from-green-500 to-emerald-500',
       skills: [
         { name: 'C# .NET', level: 85, icon: '🔷', description: 'Web API & RESTful services' },
-         { name: 'RESTful APIs', level: 85, icon: '🔗', description: 'API design & implementation' },
+        { name: 'RESTful APIs', level: 85, icon: '🔗', description: 'API design & implementation' },
         { name: 'Node.js', level: 75, icon: '🟢', description: 'Server-side JavaScript' },
         { name: 'Python', level: 60, icon: '🐍', description: 'Backend development & scripting' },
         { name: '.NET Windows Forms', level: 80, icon: '🖥️', description: 'Desktop application development' },
-       
         { name: 'Web APIs', level: 85, icon: '🌐', description: 'HTTP services & endpoints' }
       ]
     },
@@ -67,14 +79,13 @@ export default function Skills() {
     { name: 'WordPress Certification', icon: '📝', year: '2024' }
   ];
 
-  // Get all skills with their category information
   const getAllSkills = () => {
     const allSkills: Array<{
-      skill: any;
+      skill: Skill;
       category: string;
-      categoryData: any;
+      categoryData: Category;
     }> = [];
-    
+
     Object.entries(skillCategories).forEach(([categoryKey, categoryData]) => {
       categoryData.skills.forEach(skill => {
         allSkills.push({
@@ -84,11 +95,10 @@ export default function Skills() {
         });
       });
     });
-    
+
     return allSkills;
   };
 
-  // Get skills to display based on active category
   const getDisplaySkills = () => {
     if (activeCategory) {
       const categoryData = skillCategories[activeCategory as keyof typeof skillCategories];
@@ -105,7 +115,6 @@ export default function Skills() {
 
   return (
     <section id="skills" className="py-24 bg-slate-900 text-white relative overflow-hidden">
-      {/* Animated background */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-blue-900/30 to-purple-900/30"></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(120,119,198,0.3),transparent_70%)]"></div>
@@ -113,7 +122,6 @@ export default function Skills() {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_40%_40%,rgba(120,219,226,0.2),transparent_70%)]"></div>
       </div>
 
-      {/* Floating particles */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {[...Array(20)].map((_, i) => (
           <div
@@ -130,32 +138,22 @@ export default function Skills() {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        {/* Header */}
         <div className="text-center mb-20">
           <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 mb-6">
             <div className="w-2 h-2 bg-blue-400 rounded-full animate-pulse"></div>
             <span className="text-blue-300 text-sm font-medium">Technical Expertise</span>
           </div>
-          
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
-            <span className="bg-gradient-to-r from-white via-blue-200 to-white bg-clip-text text-transparent">
-              Skills &
-            </span>
+            <span className="bg-gradient-to-r from-white via-blue-200 to-white bg-clip-text text-transparent">Skills &</span>
             <br />
-            <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
-              Technologies
-            </span>
+            <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">Technologies</span>
           </h2>
-          
           <p className="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
-            My comprehensive toolkit spanning frontend development, backend services, 
-            database management, and modern development tools.
+            My comprehensive toolkit spanning frontend development, backend services, database management, and modern development tools.
           </p>
         </div>
 
-        {/* Category selector */}
         <div className="flex flex-wrap justify-center gap-4 mb-16">
-          {/* All Skills button */}
           <button
             onClick={() => setActiveCategory(null)}
             className={`group relative px-8 py-4 rounded-2xl transition-all duration-300 ${
@@ -168,13 +166,11 @@ export default function Skills() {
               <span className="text-2xl">🌟</span>
               <span className="font-semibold">All Skills</span>
             </span>
-            
             {activeCategory === null && (
               <div className="absolute inset-0 bg-gradient-to-r from-blue-500 via-purple-500 to-cyan-500 opacity-20 rounded-2xl"></div>
             )}
           </button>
 
-          {/* Category buttons */}
           {Object.entries(skillCategories).map(([key, category]) => (
             <button
               key={key}
@@ -189,7 +185,6 @@ export default function Skills() {
                 <span className="text-2xl">{category.icon}</span>
                 <span className="font-semibold">{category.title}</span>
               </span>
-              
               {activeCategory === key && (
                 <div className={`absolute inset-0 bg-gradient-to-r ${category.color} opacity-20 rounded-2xl`}></div>
               )}
@@ -197,33 +192,22 @@ export default function Skills() {
           ))}
         </div>
 
-        {/* Skills grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
           {displaySkills.map(({ skill, category, categoryData }, index) => (
             <Card
               key={`${category}-${skill.name}`}
               className="group relative bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/20 transition-all duration-500 hover:scale-105 cursor-pointer overflow-hidden"
-              onMouseEnter={() => setHoveredSkill(skill.name)}
-              onMouseLeave={() => setHoveredSkill(null)}
-              style={{
-                animationDelay: `${index * 50}ms`
-              }}
+              style={{ animationDelay: `${index * 50}ms` }}
             >
               <CardContent className="p-6">
-                {/* Category badge - only show when displaying all skills */}
                 {activeCategory === null && (
                   <div className="mb-3">
-                    <Badge 
-                      variant="secondary" 
-                      className={`bg-gradient-to-r ${categoryData.color} text-white border-0 text-xs`}
-                    >
+                    <Badge variant="secondary" className={`bg-gradient-to-r ${categoryData.color} text-white border-0 text-xs`}>
                       <span className="mr-1">{categoryData.icon}</span>
                       {categoryData.title}
                     </Badge>
                   </div>
                 )}
-
-                {/* Skill header */}
                 <div className="flex items-center gap-4 mb-4">
                   <div className="text-3xl">{skill.icon}</div>
                   <div>
@@ -231,49 +215,35 @@ export default function Skills() {
                     <p className="text-sm text-slate-300">{skill.description}</p>
                   </div>
                 </div>
-
-                {/* Progress bar */}
-                <div className="mb-4">
+                {/* <div className="mb-4">
                   <div className="flex justify-between items-center mb-2">
                     <span className="text-sm text-slate-300">Proficiency</span>
                     <span className="text-sm font-bold text-white">{skill.level}%</span>
                   </div>
                   <div className="h-2 bg-white/20 rounded-full overflow-hidden">
-                    <div 
+                    <div
                       className={`h-full bg-gradient-to-r ${categoryData.color} rounded-full transition-all duration-1000 ease-out`}
-                      style={{ 
-                        width: `${skill.level}%`,
-                        transitionDelay: `${index * 50 + 300}ms`
-                      }}
+                      style={{ width: `${skill.level}%`, transitionDelay: `${index * 50 + 300}ms` }}
                     ></div>
                   </div>
-                </div>
-
-                {/* Skill level indicator */}
-                <div className="flex items-center gap-1">
+                </div> */}
+                {/* <div className="flex items-center gap-1">
                   {[...Array(5)].map((_, i) => (
                     <div
                       key={i}
                       className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                        i < Math.floor(skill.level / 20)
-                          ? `bg-gradient-to-r ${categoryData.color}`
-                          : 'bg-white/20'
+                        i < Math.floor(skill.level / 20) ? `bg-gradient-to-r ${categoryData.color}` : 'bg-white/20'
                       }`}
-                      style={{
-                        transitionDelay: `${index * 50 + 400 + i * 50}ms`
-                      }}
+                      style={{ transitionDelay: `${index * 50 + 400 + i * 50}ms` }}
                     ></div>
                   ))}
-                </div>
+                </div> */}
               </CardContent>
-
-              {/* Hover glow effect */}
               <div className={`absolute inset-0 bg-gradient-to-r ${categoryData.color} opacity-0 group-hover:opacity-10 transition-opacity duration-300`}></div>
             </Card>
           ))}
         </div>
 
-        {/* Skills summary when showing all */}
         {activeCategory === null && (
           <div className="text-center mb-16">
             <div className="inline-flex items-center gap-8 bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
@@ -294,9 +264,7 @@ export default function Skills() {
           </div>
         )}
 
-        {/* Certifications & Experience */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Certifications */}
           <Card className="bg-white/10 backdrop-blur-sm border-white/20">
             <CardHeader>
               <CardTitle className="flex items-center gap-3 text-white">
@@ -306,65 +274,12 @@ export default function Skills() {
             </CardHeader>
             <CardContent className="space-y-4">
               {certifications.map((cert, index) => (
-                <div
-                  key={index}
-                  className="flex items-center gap-4 p-4 bg-white/5 rounded-xl hover:bg-white/10 transition-all duration-300 group cursor-pointer"
-                >
-                  <div className="text-2xl group-hover:scale-110 transition-transform duration-300">
-                    {cert.icon}
-                  </div>
-                  <div className="flex-1">
-                    <h4 className="font-semibold text-white">{cert.name}</h4>
-                    <p className="text-sm text-slate-300">Earned in {cert.year}</p>
-                  </div>
-                  <Badge variant="secondary" className="bg-white/20 text-white">
-                    Verified
-                  </Badge>
+                <div key={index} className="flex items-center gap-3">
+                  <span className="text-xl">{cert.icon}</span>
+                  <span className="text-white font-medium">{cert.name}</span>
+                  <span className="text-slate-400 text-sm">({cert.year})</span>
                 </div>
               ))}
-            </CardContent>
-          </Card>
-
-          {/* Experience & Competencies */}
-          <Card className="bg-white/10 backdrop-blur-sm border-white/20">
-            <CardHeader>
-              <CardTitle className="flex items-center gap-3 text-white">
-                <span className="text-2xl">💼</span>
-                Experience & Expertise
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="space-y-4 mb-6">
-                <div className="p-4 bg-white/5 rounded-xl">
-                  <h4 className="font-semibold text-white mb-2">Full-Stack Development Internship</h4>
-                  <p className="text-sm text-slate-300">
-                    Hands-on experience in building complete web applications using modern 
-                    technologies including React.js, .NET, and SQL databases.
-                  </p>
-                </div>
-              </div>
-              
-              <div className="grid grid-cols-2 gap-4">
-                {[
-                  'Problem Solving',
-                  'API Development',
-                  'Database Design',
-                  'UI/UX Design',
-                  'Code Review',
-                  'Team Collaboration'
-                
-        
-                ].map((competency, index) => (
-                  <div
-                    key={index}
-                    className="p-3 bg-white/5 rounded-xl text-center text-sm font-medium text-slate-200 hover:bg-white/10 hover:text-white transition-all duration-300 cursor-pointer group"
-                  >
-                    <div className="group-hover:scale-105 transition-transform duration-300">
-                      {competency}
-                    </div>
-                  </div>
-                ))}
-              </div>
             </CardContent>
           </Card>
         </div>
