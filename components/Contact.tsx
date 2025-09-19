@@ -1,5 +1,5 @@
 import  { useState } from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
+import { Card, CardContent } from './ui/card';
 
 export default function Contact() {
   const [hoveredContact, setHoveredContact] = useState<number | null>(null);
@@ -39,12 +39,12 @@ export default function Contact() {
     }
   ];
 
-  const socialLinks = [
-    { name: 'GitHub', icon: '🐙', href: 'https://github.com', color: 'hover:bg-gray-800' },
-    { name: 'LinkedIn', icon: '💼', href: 'https://www.linkedin.com/in/obaid-saleem-b57a77307', color: 'hover:bg-blue-600' },
-    { name: 'Twitter', icon: '🐦', href: 'https://twitter.com', color: 'hover:bg-blue-400' },
-    { name: 'Discord', icon: '🎮', href: 'https://discord.com', color: 'hover:bg-indigo-600' }
-  ];
+  // const socialLinks = [
+  //   { name: 'GitHub', icon: '🐙', href: 'https://github.com', color: 'hover:bg-gray-800' },
+  //   { name: 'LinkedIn', icon: '💼', href: 'https://www.linkedin.com/in/obaid-saleem-b57a77307', color: 'hover:bg-blue-600' },
+  //   { name: 'Twitter', icon: '🐦', href: 'https://twitter.com', color: 'hover:bg-blue-400' },
+  //   { name: 'Discord', icon: '🎮', href: 'https://discord.com', color: 'hover:bg-indigo-600' }
+  // ];
 
 
   return (
@@ -156,7 +156,7 @@ export default function Contact() {
                 ))}
               </CardContent>
             </Card>  */}
-
+{/* 
             <Card className="bg-white/5 backdrop-blur-sm border-white/10">
               <CardHeader>
                 <CardTitle className="flex items-center gap-3 text-white">
@@ -186,7 +186,7 @@ export default function Contact() {
                   ))}
                 </div>
               </CardContent>
-            </Card>
+            </Card> */}
           </div>
         </div>
 
