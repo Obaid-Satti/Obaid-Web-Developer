@@ -1,35 +1,8 @@
-import React, { useState } from 'react';
-import { Button } from './ui/button';
-import { Input } from './ui/input';
-import { Textarea } from './ui/textarea';
+import  { useState } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
 
 export default function Contact() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
   const [hoveredContact, setHoveredContact] = useState<number | null>(null);
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    
-    alert('Message sent successfully! I\'ll get back to you soon.');
-    setFormData({ name: '', email: '', subject: '', message: '' });
-    setIsSubmitting(false);
-  };
 
   const contactMethods = [
     {
@@ -37,7 +10,7 @@ export default function Contact() {
       title: 'Email',
       value: 'obaidsatti17@gmail.com',
       description: 'Send me a direct message',
-      href: 'obaidsatti17@gmail.com',
+      href: 'mailto:obaidsatti17@gmail.com',
       color: 'from-blue-500 to-cyan-500'
     },
     {
@@ -45,13 +18,13 @@ export default function Contact() {
       title: 'Phone',
       value: '+92 3135192214',
       description: 'Let\'s have a conversation',
-      href: 'tel: +92 3135192214',
+      href: 'tel:+923135192214',
       color: 'from-green-500 to-emerald-500'
     },
     {
       icon: '📍',
       title: 'Location',
-      value: 'Pakistan ,Rawalpindi',
+      value: 'Rawalpindi, Pakistan',
       description: 'Available for meetups',
       href: '#',
       color: 'from-purple-500 to-pink-500'
@@ -59,20 +32,20 @@ export default function Contact() {
     {
       icon: '💼',
       title: 'LinkedIn',
-      value: 'https://www.linkedin.com/in/obaid-saleem-b57a77307',
-      description: 'Connect professionally',
+      value: 'Connect with me',
+      description: 'Professional networking',
       href: 'https://www.linkedin.com/in/obaid-saleem-b57a77307',
-      
       color: 'from-blue-600 to-blue-800'
     }
   ];
 
   const socialLinks = [
-    { name: 'GitHub', icon: '🐙', href: '#', color: 'hover:bg-gray-800' },
-    { name: 'LinkedIn', icon: '💼', href: '#', color: 'hover:bg-blue-600' },
-    { name: 'Twitter', icon: '🐦', href: '#', color: 'hover:bg-blue-400' },
-    { name: 'Discord', icon: '🎮', href: '#', color: 'hover:bg-indigo-600' }
+    { name: 'GitHub', icon: '🐙', href: 'https://github.com', color: 'hover:bg-gray-800' },
+    { name: 'LinkedIn', icon: '💼', href: 'https://www.linkedin.com/in/obaid-saleem-b57a77307', color: 'hover:bg-blue-600' },
+    { name: 'Twitter', icon: '🐦', href: 'https://twitter.com', color: 'hover:bg-blue-400' },
+    { name: 'Discord', icon: '🎮', href: 'https://discord.com', color: 'hover:bg-indigo-600' }
   ];
+
 
   return (
     <section id="contact" className="py-24 bg-slate-900 text-white relative overflow-hidden">
@@ -99,30 +72,29 @@ export default function Contact() {
           
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
             <span className="bg-gradient-to-r from-white via-blue-200 to-white bg-clip-text text-transparent">
-              Let's Work
+              Let's Connect
             </span>
             <br />
             <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
-              Together
+              & Collaborate
             </span>
           </h2>
           
           <p className="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
-            Ready to bring your next project to life? Let's discuss how we can 
-            create something amazing together.
+            Ready to bring your next project to life? I'm always excited to discuss new opportunities 
+            and collaborate on innovative solutions.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-12">
-          {/* Contact information */}
-          <div className="lg:col-span-2 space-y-8">
-            {/* Contact methods */}
-            <div className="space-y-6">
-              <h3 className="text-2xl font-bold mb-8 flex items-center gap-3">
-                <span className="text-2xl">🤝</span>
-                Get In Touch
-              </h3>
-              
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+          {/* Contact Methods */}
+          <div className="lg:col-span-2 space-y-6">
+            <h3 className="text-2xl font-bold mb-8 flex items-center gap-3">
+              <span className="text-2xl">🤝</span>
+              Get In Touch
+            </h3>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {contactMethods.map((method, index) => (
                 <a
                   key={index}
@@ -131,19 +103,19 @@ export default function Contact() {
                   onMouseEnter={() => setHoveredContact(index)}
                   onMouseLeave={() => setHoveredContact(null)}
                 >
-                  <Card className="bg-white/5 backdrop-blur-sm border-white/10 hover:bg-white/10 transition-all duration-300 group-hover:scale-105 overflow-hidden">
+                  <Card className="bg-white/5 backdrop-blur-sm border-white/10 hover:bg-white/10 transition-all duration-300 group-hover:scale-105 overflow-hidden h-full">
                     <CardContent className="p-6 relative">
-                      <div className="flex items-center gap-4">
-                        <div className="text-3xl group-hover:scale-110 transition-transform duration-300">
+                      <div className="flex items-start gap-4">
+                        <div className="text-3xl group-hover:scale-110 transition-transform duration-300 mt-1">
                           {method.icon}
                         </div>
-                        <div className="flex-1">
-                          <h4 className="font-semibold text-white mb-1">{method.title}</h4>
-                          <p className="text-blue-300 font-medium mb-1">{method.value}</p>
+                        <div className="flex-1 min-w-0">
+                          <h4 className="font-semibold text-white mb-2">{method.title}</h4>
+                          <p className="text-blue-300 font-medium mb-2 break-words">{method.value}</p>
                           <p className="text-sm text-slate-400">{method.description}</p>
                         </div>
                         <svg 
-                          className="w-5 h-5 text-slate-400 group-hover:text-white group-hover:translate-x-1 transition-all duration-300" 
+                          className="w-5 h-5 text-slate-400 group-hover:text-white group-hover:translate-x-1 transition-all duration-300 flex-shrink-0 mt-1" 
                           fill="none" 
                           stroke="currentColor" 
                           viewBox="0 0 24 24"
@@ -161,8 +133,30 @@ export default function Contact() {
                 </a>
               ))}
             </div>
+          </div>
 
-            {/* Social links */}
+          {/* Working Hours & Availability */}
+          <div className="space-y-8">
+            {/* <Card className="bg-white/5 backdrop-blur-sm border-white/10">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-3 text-white">
+                  <span className="text-2xl">⏰</span>
+                  Working Hours
+                </CardTitle>
+                <CardDescription className="text-slate-300">
+                  When I'm typically available for communication
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                {workingHours.map((schedule, index) => (
+                  <div key={index} className="flex justify-between items-center py-2 border-b border-white/10 last:border-b-0">
+                    <span className="text-slate-300 text-sm">{schedule.day}</span>
+                    <span className="text-white text-sm font-medium">{schedule.hours}</span>
+                  </div>
+                ))}
+              </CardContent>
+            </Card>  */}
+
             <Card className="bg-white/5 backdrop-blur-sm border-white/10">
               <CardHeader>
                 <CardTitle className="flex items-center gap-3 text-white">
@@ -174,137 +168,68 @@ export default function Contact() {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <div className="flex gap-4">
+                <div className="grid grid-cols-2 gap-3">
                   {socialLinks.map((social, index) => (
                     <a
                       key={index}
                       href={social.href}
-                      className={`group w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center text-xl transition-all duration-300 hover:scale-110 ${social.color} hover:text-white`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`group flex items-center gap-3 p-3 bg-white/10 rounded-xl transition-all duration-300 hover:scale-105 ${social.color} hover:text-white`}
                       title={social.name}
                     >
-                      <span className="group-hover:scale-110 transition-transform duration-300">
+                      <span className="text-xl group-hover:scale-110 transition-transform duration-300">
                         {social.icon}
                       </span>
+                      <span className="text-sm font-medium">{social.name}</span>
                     </a>
                   ))}
                 </div>
               </CardContent>
             </Card>
-
-            {/* Fun fact */}
-            <Card className="bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-cyan-500/10 border-blue-500/20 backdrop-blur-sm">
-              <CardContent className="p-6">
-                <div className="flex items-center gap-3 mb-3">
-                  <span className="text-2xl animate-bounce">⚡</span>
-                  <h4 className="font-semibold text-black">Quick Response</h4>
-                </div>
-               <p className="text-black text-sm">
-               I typically respond to messages within 24 hours. For urgent 
-                  matters, feel free to call or send a LinkedIn message!
-                </p>
-              </CardContent>
-            </Card>
           </div>
+        </div>
 
-          {/* Contact form */}
-          <div className="lg:col-span-3">
-            <Card className="bg-white/5 backdrop-blur-sm border-white/10 overflow-hidden">
-              <CardHeader className="relative">
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-cyan-500/10"></div>
-                <div className="relative">
-                  <CardTitle className="text-2xl text-white flex items-center gap-3">
-                    <span className="text-2xl">💌</span>
-                    Send Me a Message
-                  </CardTitle>
-                  <CardDescription className="text-slate-300">
-                    Tell me about your project and let's create something amazing together
-                  </CardDescription>
-                </div>
-              </CardHeader>
-              
-              <CardContent className="p-8">
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  {/* Name and Email row */}
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div className="space-y-2">
-                      <label className="text-sm font-medium text-slate-300">Name</label>
-                      <Input
-                        name="name"
-                        value={formData.name}
-                        onChange={handleInputChange}
-                        placeholder="Your name"
-                        required
-                        className="bg-white/5 border-white/20 text-white placeholder:text-slate-400 focus:border-blue-400 focus:ring-blue-400/20"
-                      />
-                    </div>
-                    <div className="space-y-2">
-                      <label className="text-sm font-medium text-slate-300">Email</label>
-                      <Input
-                        name="email"
-                        type="email"
-                        value={formData.email}
-                        onChange={handleInputChange}
-                        placeholder="your.email@example.com"
-                        required
-                        className="bg-white/5 border-white/20 text-white placeholder:text-slate-400 focus:border-blue-400 focus:ring-blue-400/20"
-                      />
-                    </div>
-                  </div>
+        {/* Bottom CTA and Quick Facts */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <Card className="bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-cyan-500/10 border-blue-500/20 backdrop-blur-sm">
+            <CardContent className="p-6">
+              <div className="flex items-center gap-3 mb-4">
+                <span className="text-2xl animate-bounce">⚡</span>
+                <h4 className="font-semibold text-">Quick Response</h4>
+              </div>
+             <p className="text-black text-sm mb-4">
 
-                  {/* Subject */}
-                  <div className="space-y-2">
-                    <label className="text-sm font-medium text-slate-300">Subject</label>
-                    <Input
-                      name="subject"
-                      value={formData.subject}
-                      onChange={handleInputChange}
-                      placeholder="What's this about?"
-                      required
-                      className="bg-white/5 border-white/20 text-white placeholder:text-slate-400 focus:border-blue-400 focus:ring-blue-400/20"
-                    />
-                  </div>
+                I typically respond to messages within 24 hours. For urgent 
+                matters, feel free to call or send a LinkedIn message!
+              </p>
+              <div className="flex items-center gap-2 text-green-300">
+                <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                <span className="text-sm">Currently available for new projects</span>
+              </div>
+            </CardContent>
+          </Card>
 
-                  {/* Message */}
-                  <div className="space-y-2">
-                    <label className="text-sm font-medium text-slate-300">Message</label>
-                    <Textarea
-                      name="message"
-                      value={formData.message}
-                      onChange={handleInputChange}
-                      placeholder="Tell me about your project, timeline, and any specific requirements..."
-                      rows={6}
-                      required
-                      className="bg-white/5 border-white/20 text-white placeholder:text-slate-400 focus:border-blue-400 focus:ring-blue-400/20 resize-none"
-                    />
-                  </div>
+          <Card className="bg-gradient-to-r from-purple-500/10 via-pink-500/10 to-cyan-500/10 border-purple-500/20 backdrop-blur-sm">
+            <CardContent className="p-6">
+              <div className="flex items-center gap-3 mb-4">
+                <span className="text-2xl">🚀</span>
+                <h4 className="font-semibold text-black">Let's Build Something Amazing</h4>
+              </div>
+            <p className="text-black text-sm mb-4">
 
-                  {/* Submit button */}
-                  <Button
-                    type="submit"
-                    disabled={isSubmitting}
-                    className="group w-full bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-600 text-white border-0 hover:scale-105 transition-all duration-300 shadow-xl hover:shadow-2xl hover:shadow-blue-500/25 disabled:opacity-50 disabled:cursor-not-allowed h-12"
-                  >
-                    <span className="relative z-10 flex items-center justify-center gap-2">
-                      {isSubmitting ? (
-                        <>
-                          <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
-                          Sending...
-                        </>
-                      ) : (
-                        <>
-                          Send Message
-                          <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
-                          </svg>
-                        </>
-                      )}
-                    </span>
-                    <div className="absolute inset-0 bg-gradient-to-r from-cyan-600 via-blue-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-lg"></div>
-                  </Button>
-                </form>
-              </CardContent>
-            </Card>
-          </div>
+                Whether it's a web application, mobile app, or a complex system, 
+                I'm ready to turn your ideas into reality.
+              </p>
+              <div className="flex flex-wrap gap-2">
+                {['React.js', 'C# .NET', 'React Native', 'SQL'].map((tech) => (
+                  <span key={tech} className="px-2 py-1 bg-white/10 rounded-full text-xs text-green">
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </CardContent>
+          </Card>
         </div>
       </div>
     </section>
