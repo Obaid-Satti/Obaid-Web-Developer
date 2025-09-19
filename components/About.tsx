@@ -150,7 +150,7 @@ export default function About() {
               <CardContent className="p-8 text-center">
                 {/* Profile image with gradient border */}
                 <div className="relative mx-auto mb-6 w-32 h-32">
-                  <div className="absolute inset-0 bg-gradient-to-r from-blue-500 via-purple-500 to-cyan-500 rounded-full p-1 animate-spin-slow">
+                  <div className="absolute inset-0 bg-gradient-to-r from-blue-500 via-purple-500 to-cyan-500 rounded-full p-1 ">
                     <div className="w-full h-full bg-white dark:bg-slate-800 rounded-full overflow-hidden">
                       <ImageWithFallback
                         src={dp}
