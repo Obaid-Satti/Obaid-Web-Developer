@@ -9,15 +9,57 @@ export default function Projects() {
   const [hoveredProject, setHoveredProject] = useState<number | null>(null);
 
   const filters = [
-    { id: 'all', name: 'All Projects', count: 5 },
-    { id: 'web', name: 'Web Apps', count: 3 },
-    { id: 'mobile', name: 'Mobile', count: 1 },
+    { id: 'all', name: 'All Projects', count: 8 },
+    { id: 'web', name: 'Web Apps', count: 5 },
+    { id: 'mobile', name: 'Mobile', count: 2 },
     { id: 'ai', name: 'AI/ML', count: 1 }
   ];
 
   const projects = [
     {
       id: 1,
+      title: 'Foodhub',
+      description: 'Online platform for food ordering with dedicated admin and customer interfaces.',
+      longDescription: 'A complete food ordering solution built with React, Node.js, and MongoDB. Features include real-time order tracking, menu management, secure payments, and separate dashboards for restaurants and customers.',
+      image: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmb29kJTIwcGl6emElMjBkZWxpdmVyeXxlbnwxfHx8fDE3NzE0MjIyMjN8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+      category: 'web',
+      technologies: ['React.js', 'Node.js', 'MongoDB', 'Express'],
+      features: ['Order Tracking', 'Admin Dashboard', 'Restaurant Management', 'Secure Payments'],
+      github: '#',
+      demo: '#',
+      status: 'Completed',
+      year: '2025'
+    },
+    {
+      id: 2,
+      title: 'Smart Cart',
+      description: 'Mobile shopping assistant allowing users to scan QR codes or barcodes for instant product info and checkout.',
+      longDescription: 'Revolutionizing the retail experience with a scan-and-go mobile app. Built with React Native and Node.js, it enables customers to scan items in-store, view details, and checkout via their mobile device.',
+      image: 'https://images.unsplash.com/photo-1661169398346-aecdc4f5068b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzaG9wcGluZyUyMGJhcmNvZGUlMjBzY2FuJTIwYXBwfGVufDF8fHx8MTc3MTQyMTg3NHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+      category: 'mobile',
+      technologies: ['React Native', 'Node.js', 'MongoDB', 'QR Scanning'],
+      features: ['Barcode Scanning', 'Instant Checkout', 'Inventory Management', 'Purchase History'],
+      github: '#',
+      demo: '#',
+      status: 'Completed',
+      year: '2025'
+    },
+    {
+      id: 3,
+      title: 'Blood Bank',
+      description: 'A life-saving platform connecting blood donors with patients in need through an intuitive web interface.',
+      longDescription: 'Dedicated to streamlining blood donation, this platform allows donors to register and patients to find matches quickly. Features include location-based search, emergency requests, and donor eligibility screening.',
+      image: 'https://images.unsplash.com/photo-1586768630682-6ffccd5624ca?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwYmxvb2QlMjBkb25hdGlvbiUyMGRvY3RvciUyMHBhdGllbnR8ZW58MXx8fHwxNzcxNDIyNDAyfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+      category: 'web',
+      technologies: ['React.js', 'Node.js', 'MongoDB', 'Express'],
+      features: ['Donor Registration', 'Blood Search', 'Emergency Alerts', 'Admin Panel'],
+      github: '#',
+      demo: '#',
+      status: 'Completed',
+      year: '2025'
+    },
+    {
+      id: 4,
       title: 'Handymen Services Platform',
       description: 'A comprehensive platform connecting customers with skilled handymen, featuring service booking, real-time tracking, and payment processing.',
       longDescription: 'Built with .NET Web API for robust backend services, SQL Server for data management, and React.js for responsive frontend. Features include user authentication, service categories, booking system, and payment integration.',
@@ -28,10 +70,10 @@ export default function Projects() {
       github: '#',
       demo: '#',
       status: 'Completed',
-      year: '2024'
+      year: '2025'
     },
     {
-      id: 2,
+      id: 5,
       title: 'AI-Powered Resume Screening',
       description: 'Intelligent resume screening system using machine learning to match candidates with job requirements automatically.',
       longDescription: 'Advanced AI system built with React.js frontend, Node.js backend, and MongoDB for data storage. Uses natural language processing to analyze resumes and job descriptions for optimal matching.',
@@ -45,7 +87,7 @@ export default function Projects() {
       year: '2024'
     },
     {
-      id: 3,
+      id: 6,
       title: 'Naatkhuwaan App',
       description: 'Cultural and educational mobile application developed using C# MVC architecture with comprehensive content management.',
       longDescription: 'A culturally focused application built with C# MVC for server-side logic and SQL Server for robust data management. Features content management, user engagement tools, and cultural resource sharing.',
@@ -59,7 +101,7 @@ export default function Projects() {
       year: '2023'
     },
     {
-      id: 4,
+      id: 7,
       title: 'E-commerce Store',
       description: 'Full-featured online store built with WordPress, offering seamless shopping experience with modern design and functionality.',
       longDescription: 'Professional e-commerce solution developed with WordPress and WooCommerce. Features include product catalog, shopping cart, payment gateway integration, and order management system.',
@@ -73,7 +115,7 @@ export default function Projects() {
       year: '2023'
     },
     {
-      id: 5,
+      id: 8,
       title: 'Todo List Application',
       description: 'Modern task management application with clean interface, built using React.js frontend and C# backend for reliable performance.',
       longDescription: 'Efficient task management solution featuring React.js for interactive user interface and C# backend for robust data handling. Includes task organization, priority settings, and progress tracking.',
@@ -88,8 +130,8 @@ export default function Projects() {
     }
   ];
 
-  const filteredProjects = activeFilter === 'all' 
-    ? projects 
+  const filteredProjects = activeFilter === 'all'
+    ? projects
     : projects.filter(project => project.category === activeFilter);
 
   const getStatusColor = (status: string) => {
@@ -134,7 +176,7 @@ export default function Projects() {
             <div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></div>
             <span className="text-blue-600 dark:text-blue-400 text-sm font-medium">Portfolio</span>
           </div>
-          
+
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
             <span className="bg-gradient-to-r from-slate-900 via-blue-900 to-slate-900 dark:from-slate-100 dark:via-blue-100 dark:to-slate-100 bg-clip-text text-transparent">
               Featured
@@ -144,9 +186,9 @@ export default function Projects() {
               Projects
             </span>
           </h2>
-          
+
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            A showcase of my development projects across different technologies including .NET, React.js, C#, and modern web frameworks.
+            A showcase of my development projects across different technologies including React, Node.js, .NET, and more.
           </p>
         </div>
 
@@ -160,19 +202,17 @@ export default function Projects() {
                 e.stopPropagation();
                 handleFilterClick(filter.id);
               }}
-              className={`group relative px-6 py-3 rounded-full transition-all duration-200 ease-out select-none cursor-pointer ${
-                activeFilter === filter.id
-                  ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg scale-105'
-                  : 'bg-white/80 dark:bg-slate-800/80 text-muted-foreground hover:text-foreground hover:scale-105 border border-border/50 hover:border-blue-300 dark:hover:border-blue-600'
-              }`}
+              className={`group relative px-6 py-3 rounded-full transition-all duration-200 ease-out select-none cursor-pointer ${activeFilter === filter.id
+                ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg scale-105'
+                : 'bg-white/80 dark:bg-slate-800/80 text-muted-foreground hover:text-foreground hover:scale-105 border border-border/50 hover:border-blue-300 dark:hover:border-blue-600'
+                }`}
             >
               <span className="relative z-10 flex items-center gap-2">
                 {filter.name}
-                <Badge variant="secondary" className={`text-xs ${
-                  activeFilter === filter.id 
-                    ? 'bg-white/20 text-white' 
-                    : 'bg-muted text-muted-foreground'
-                }`}>
+                <Badge variant="secondary" className={`text-xs ${activeFilter === filter.id
+                  ? 'bg-white/20 text-white'
+                  : 'bg-muted text-muted-foreground'
+                  }`}>
                   {filter.count}
                 </Badge>
               </span>
@@ -200,7 +240,7 @@ export default function Projects() {
             >
               {/* Image */}
               <div className="relative overflow-hidden">
-                <div 
+                <div
                   className="w-full h-48 will-change-transform transition-transform duration-500 ease-out cursor-pointer"
                   style={{ transform: hoveredProject === project.id ? 'scale(1.05)' : 'scale(1)' }}
                 >
@@ -212,22 +252,22 @@ export default function Projects() {
                 </div>
 
                 {/* Hover overlay */}
-                <div 
+                <div
                   className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent transition-opacity duration-300 ease-out"
                   style={{ opacity: hoveredProject === project.id ? 1 : 0 }}
                 >
                   <div className="absolute bottom-4 left-4 right-4">
                     <div className="flex gap-2 mb-3">
-                      <Button 
-                        size="sm" 
+                      <Button
+                        size="sm"
                         className="bg-white/20 hover:bg-white/30 text-white border-0 backdrop-blur-sm cursor-pointer"
                         onClick={(e) => handleDemoClick(project, e)}
                       >
                         Demo
                       </Button>
-                      <Button 
-                        size="sm" 
-                        variant="outline" 
+                      <Button
+                        size="sm"
+                        variant="outline"
                         className="bg-white/20 hover:bg-white/30 text-white border-white/30 backdrop-blur-sm cursor-pointer"
                         onClick={(e) => handleCodeClick(project, e)}
                       >
@@ -251,7 +291,7 @@ export default function Projects() {
               </div>
 
               <CardHeader className="pb-3 cursor-pointer">
-                <CardTitle 
+                <CardTitle
                   className="text-xl transition-colors duration-200 cursor-pointer"
                   style={{ color: hoveredProject === project.id ? 'rgb(37 99 235)' : 'inherit' }}
                 >

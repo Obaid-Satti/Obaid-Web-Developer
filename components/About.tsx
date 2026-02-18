@@ -19,7 +19,7 @@ export default function About() {
     { name: 'JavaScript', level: 85, color: 'bg-yellow-500' },
     { name: 'SQL', level: 85, color: 'bg-green-500' },
     { name: 'React Native', level: 80, color: 'bg-blue-600' },
-    { name: 'Node.js', level: 75, color: 'bg-green-600' }
+    { name: 'Node.js', level: 85, color: 'bg-green-600' }
   ];
 
   const timeline = [
@@ -42,7 +42,7 @@ export default function About() {
             <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
             <span className="text-blue-600 dark:text-blue-400 text-sm font-medium">About Me</span>
           </div>
-          
+
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
             <span className="bg-gradient-to-r from-slate-900 via-blue-900 to-slate-900 dark:from-slate-100 dark:via-blue-100 dark:to-slate-100 bg-clip-text text-transparent">
               Building Digital
@@ -52,7 +52,7 @@ export default function About() {
               Solutions
             </span>
           </h2>
-          
+
           <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full"></div>
         </div>
 
@@ -65,26 +65,26 @@ export default function About() {
                 <span className="text-2xl">👨‍💻</span>
                 My Story
               </h3>
-              
+
               <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
                 <p>
-                  I'm Obaid Saleem, a passionate full-stack developer with expertise in 
-                  modern web technologies. My journey in software development has been 
-                  driven by curiosity and a genuine love for creating digital solutions 
+                  I'm Obaid Saleem, a passionate full-stack developer with expertise in
+                  modern web technologies. My journey in software development has been
+                  driven by curiosity and a genuine love for creating digital solutions
                   that make a difference.
                 </p>
-                
+
                 <p>
-                  I specialize in React.js for frontend development and C# .NET for 
-                  backend services, with strong database skills in SQL and MongoDB. 
-                  My experience includes building responsive web applications, RESTful 
+                  I specialize in React.js for frontend development and C# .NET for
+                  backend services, with strong database skills in SQL and MongoDB.
+                  My experience includes building responsive web applications, RESTful
                   APIs, and cross-platform mobile apps using React Native.
                 </p>
-                
+
                 <p>
-                  Through my internship experience as a full-stack web developer, I've 
-                  gained hands-on experience in the complete software development lifecycle. 
-                  I'm always eager to learn new technologies and take on challenging projects 
+                  Through my internship experience as a full-stack web developer, I've
+                  gained hands-on experience in the complete software development lifecycle.
+                  I'm always eager to learn new technologies and take on challenging projects
                   that push the boundaries of what's possible.
                 </p>
               </div>
@@ -100,11 +100,11 @@ export default function About() {
                         <span className="text-sm text-muted-foreground">{tech.level}%</span>
                       </div>
                       <div className="h-2 bg-slate-200 dark:bg-slate-700 rounded-full overflow-hidden">
-                        <div 
+                        <div
                           className={`h-full ${tech.color} rounded-full transition-all duration-1000 ease-out`}
-                          style={{ 
+                          style={{
                             width: `${tech.level}%`,
-                            animationDelay: `${index * 100}ms` 
+                            animationDelay: `${index * 100}ms`
                           }}
                         ></div>
                       </div>
@@ -120,7 +120,7 @@ export default function About() {
                 <span className="text-2xl">🚀</span>
                 My Journey
               </h3>
-              
+
               <div className="space-y-6">
                 {timeline.map((item, index) => (
                   <div key={index} className="flex gap-6 group">
@@ -160,10 +160,10 @@ export default function About() {
                     </div>
                   </div>
                 </div>
-                
+
                 <h3 className="text-2xl font-bold mb-2">Obaid Saleem</h3>
                 <p className="text-muted-foreground mb-6">Full-Stack Developer</p>
-                
+
                 {/* Social links */}
                 <div className="flex justify-center gap-3">
                   {[
@@ -198,10 +198,10 @@ export default function About() {
                     <div className="text-2xl font-bold mb-1">{stat.number}</div>
                     <div className="text-sm text-muted-foreground">{stat.label}</div>
                   </CardContent>
-                  
+
                   {/* Hover gradient background */}
                   <div className={`absolute inset-0 bg-gradient-to-r ${stat.color} opacity-0 group-hover:opacity-10 transition-opacity duration-300`}></div>
-                  
+
                   {/* Animated border */}
                   {hoveredStat === index && (
                     <div className={`absolute inset-0 bg-gradient-to-r ${stat.color} opacity-20 animate-pulse`}></div>
@@ -218,7 +218,7 @@ export default function About() {
                   <h4 className="font-semibold">Fun Fact</h4>
                 </div>
                 <p className="text-sm text-muted-foreground">
-                  I love exploring new technologies and frameworks! Currently diving 
+                  I love exploring new technologies and frameworks! Currently diving
                   deeper into advanced React patterns and .NET Core optimization. ⚡
                 </p>
               </CardContent>
