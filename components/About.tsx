@@ -15,10 +15,10 @@ export default function About() {
 
   const technologies = [
     { name: 'React.js', level: 90, color: 'bg-blue-500' },
+    { name: 'API & Automation', level: 90, color: 'bg-orange-500' },
     { name: 'C# .NET', level: 85, color: 'bg-purple-600' },
     { name: 'JavaScript', level: 85, color: 'bg-yellow-500' },
     { name: 'SQL', level: 85, color: 'bg-green-500' },
-    { name: 'React Native', level: 80, color: 'bg-blue-600' },
     { name: 'Node.js', level: 85, color: 'bg-green-600' }
   ];
 
@@ -75,10 +75,19 @@ export default function About() {
                 </p>
 
                 <p>
-                  I specialize in React.js for frontend development and C# .NET for
-                  backend services, with strong database skills in SQL and MongoDB.
-                  My experience includes building responsive web applications, RESTful
-                  APIs, and cross-platform mobile apps using React Native.
+                  I am primarily a MERN stack developer, specializing in React.js for 
+                  building dynamic frontends and Node.js for robust, scalable backends. 
+                  Alongside my MERN expertise, I have solid experience developing enterprise-level 
+                  applications with C# .NET. My skill set extends to MongoDB, SQL, and 
+                  building cross-platform mobile apps using React Native.
+                </p>
+
+                <p>
+                  Beyond traditional web development, I am highly skilled in business process
+                  automation. I have extensive experience building scalable integrations using
+                  Zapier, custom Webhooks, and complex APIs. This automation expertise
+                  allows me to connect disparate systems, eliminate manual workflows,
+                  and greatly improve operational efficiency.
                 </p>
 
                 <p>
@@ -219,7 +228,7 @@ export default function About() {
                 </div>
                 <p className="text-sm text-muted-foreground">
                   I love exploring new technologies and frameworks! Currently diving
-                  deeper into advanced React patterns and .NET Core optimization. ⚡
+                  deeper into advanced React patterns and complex workflow automation. ⚡
                 </p>
               </CardContent>
             </Card>

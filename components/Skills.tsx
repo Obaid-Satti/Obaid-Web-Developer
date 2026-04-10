@@ -40,10 +40,21 @@ export default function Skills() {
       skills: [
         { name: 'C# .NET', level: 85, icon: '🔷', description: 'Web API & RESTful services' },
         { name: 'RESTful APIs', level: 85, icon: '🔗', description: 'API design & implementation' },
-        { name: 'Node.js', level: 75, icon: '🟢', description: 'Server-side JavaScript' },
+        { name: 'Node.js', level: 80, icon: '🟢', description: 'Server-side JavaScript' },
         { name: 'Python', level: 60, icon: '🐍', description: 'Backend development & scripting' },
         { name: '.NET Windows Forms', level: 80, icon: '🖥️', description: 'Desktop application development' },
         { name: 'Web APIs', level: 85, icon: '🌐', description: 'HTTP services & endpoints' }
+      ]
+    },
+    automation: {
+      title: 'Automation & Integration',
+      icon: '⚡',
+      color: 'from-yellow-400 to-orange-500',
+      skills: [
+        { name: 'Zapier', level: 95, icon: '⚡', description: 'Advanced multi-step workflow automation' },
+        { name: 'Webhooks', level: 90, icon: '🪝', description: 'Real-time data synchronization events' },
+        { name: 'API Integration', level: 90, icon: '🔄', description: 'Connecting third-party systems' },
+        { name: 'Process Optimization', level: 85, icon: '📈', description: 'Streamlining business workflows' }
       ]
     },
     database: {
@@ -51,8 +62,8 @@ export default function Skills() {
       icon: '💾',
       color: 'from-purple-500 to-pink-500',
       skills: [
-        { name: 'SQL Server', level: 85, icon: '🗄️', description: 'Advanced database design & queries' },
-        { name: 'MongoDB', level: 75, icon: '🍃', description: 'NoSQL document database' },
+        { name: 'SQL Server', level: 100, icon: '🗄️', description: 'Advanced database design & queries' },
+        { name: 'MongoDB', level: 85, icon: '🍃', description: 'NoSQL document database' },
         { name: 'Database Design', level: 80, icon: '📊', description: 'Normalization & optimization' },
         { name: 'Advanced Queries', level: 80, icon: '🔍', description: 'Complex SQL operations' }
       ]

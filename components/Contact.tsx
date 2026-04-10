@@ -36,6 +36,14 @@ export default function Contact() {
       description: 'Professional networking',
       href: 'https://www.linkedin.com/in/obaid-saleem-b57a77307',
       color: 'from-blue-600 to-blue-800'
+    },
+    {
+      icon: '🐙',
+      title: 'GitHub',
+      value: 'Obaid-Satti',
+      description: 'View my open-source projects',
+      href: 'https://github.com/Obaid-Satti',
+      color: 'from-slate-600 to-slate-800'
     }
   ];
 
