@@ -192,7 +192,7 @@ export default function Hero() {
                       <span className="text-green-500">"React"</span>,
                       <span className="text-green-500">"Node"</span>,
                       <span className="text-green-500">"Automation"</span>
-                      <span className="text-green-500">".NET"</span>
+
                       <span className="text-blue-500">]</span>,
                     </div>
                     <div className="flex items-center gap-2">

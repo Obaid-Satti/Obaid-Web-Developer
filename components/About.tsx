@@ -68,33 +68,19 @@ export default function About() {
 
               <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
                 <p>
-                  I'm Obaid Saleem, a passionate full-stack developer with expertise in
-                  modern web technologies. My journey in software development has been
-                  driven by curiosity and a genuine love for creating digital solutions
-                  that make a difference.
+                  I'm Obaid Saleem, a passionate MERN stack developer and automation specialist. 
+                  My journey is driven by curiosity and a focus on building efficient, scalable applications.
                 </p>
 
                 <p>
-                  I am primarily a MERN stack developer, specializing in React.js for 
-                  building dynamic frontends and Node.js for robust, scalable backends. 
-                  Alongside my MERN expertise, I have solid experience developing enterprise-level 
-                  applications with C# .NET. My skill set extends to MongoDB, SQL, and 
-                  building cross-platform mobile apps using React Native.
+                  I specialize in React.js, Node.js, and MongoDB to deliver dynamic digital solutions. 
+                  Beyond coding, I build intelligent automations using Zapier and custom APIs 
+                  to connect systems, eliminate manual tasks, and streamline operations.
                 </p>
 
                 <p>
-                  Beyond traditional web development, I am highly skilled in business process
-                  automation. I have extensive experience building scalable integrations using
-                  Zapier, custom Webhooks, and complex APIs. This automation expertise
-                  allows me to connect disparate systems, eliminate manual workflows,
-                  and greatly improve operational efficiency.
-                </p>
-
-                <p>
-                  Through my internship experience as a full-stack web developer, I've
-                  gained hands-on experience in the complete software development lifecycle.
-                  I'm always eager to learn new technologies and take on challenging projects
-                  that push the boundaries of what's possible.
+                  With hands-on full-stack development experience, I'm always eager 
+                  to tackle new challenges and transform complex problems into seamless digital experiences.
                 </p>
               </div>
 
