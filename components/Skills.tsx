@@ -20,6 +20,18 @@ export default function Skills() {
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
 
   const skillCategories: Record<string, Category> = {
+    data: {
+      title: 'Data & Analytics',
+      icon: '📈',
+      color: 'from-cyan-500 to-blue-500',
+      skills: [
+        { name: 'Snowflake', level: 80, icon: '❄️', description: 'Cloud data warehousing' },
+        { name: 'Power BI', level: 85, icon: '📊', description: 'Business intelligence & reporting' },
+        { name: 'ETL / ELT', level: 80, icon: '🔄', description: 'Data extraction & transformation' },
+        { name: 'Oracle SQL', level: 85, icon: '🗃️', description: 'Advanced database querying' },
+        { name: 'Excel', level: 90, icon: '📗', description: 'Data analysis & modeling' }
+      ]
+    },
     frontend: {
       title: 'Frontend Development',
       icon: '🎨',
@@ -160,7 +172,7 @@ export default function Skills() {
             <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">Technologies</span>
           </h2>
           <p className="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
-            My comprehensive toolkit spanning frontend development, backend services, database management, and modern development tools.
+            My specialized toolkit spanning Data Analytics, Cloud Warehousing, MERN Stack development, and database engineering.
           </p>
         </div>
 

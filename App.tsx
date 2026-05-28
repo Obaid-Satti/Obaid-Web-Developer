@@ -28,8 +28,8 @@ export default function App() {
                 Obaid Saleem
               </h3>
               <p className="text-slate-400 text-sm leading-relaxed">
-                Full-Stack Developer specializing in React.js, .NET, and modern web technologies. 
-                Passionate about building scalable applications and user-friendly digital experiences.
+                Data Analyst @ Systems Ltd and MERN stack developer. 
+                Passionate about data engineering, business intelligence, and building scalable digital architectures.
               </p>
               <div className="flex gap-3">
                 {[
@@ -81,7 +81,7 @@ export default function App() {
                 </p>
                 <p className="text-slate-400 flex items-center gap-2">
                   <span>💼</span>
-                  Full-Stack Developer
+                  Data Analyst @ Systems Ltd
                 </p>
                 <p className="text-slate-400 flex items-center gap-2">
                   <span>🎓</span>
@@ -94,7 +94,7 @@ export default function App() {
           {/* Bottom bar */}
           <div className="pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-slate-400 text-sm">
-              © 2024 Obaid Saleem. Built with React, TypeScript, and Tailwind CSS.
+              © 2026 Obaid Saleem. Built with React & TypeScript.
             </p>
             <div className="flex items-center gap-4 text-sm text-slate-400">
               <span className="flex items-center gap-2">

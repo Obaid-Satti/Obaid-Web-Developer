@@ -7,6 +7,7 @@ export default function Hero() {
   const [isTyping, setIsTyping] = useState(true);
 
   const roles = [
+    'Data Analyst',
     'Full-Stack Developer',
     'React.js Developer',
     'Node js Developer',
@@ -91,9 +92,9 @@ export default function Hero() {
 
             {/* Description */}
             <p className="text-lg text-muted-foreground max-w-2xl leading-relaxed">
-              Passionate MERN stack developer and automation expert specializing in Node.js and React.js.
-              Alongside my primary stack and solid C# .NET experience, I build intelligent automations (Zapier, APIs)
-              that deliver exceptional digital experiences and streamline business operations.
+              Data Analyst with specialized experience at <span className="text-foreground font-semibold">Systems Limited</span>—Pakistan's first and leading IT company. 
+              <br />
+              <span className="block mt-2">Also a Full-Stack Developer building high-performance MERN web solutions.</span>
             </p>
 
             {/* Action buttons */}
@@ -137,9 +138,16 @@ export default function Hero() {
                     </div>
                   ))}
                 </div>
-                <div className="text-sm text-muted-foreground">
-                  <div className="font-semibold text-foreground">Internship Experience</div>
-                  <div className="text-xs">Full-Stack Web Developer</div>
+                <div className="text-sm text-muted-foreground text-left">
+                  <div className="font-semibold text-foreground mb-1">Professional Experience</div>
+                  <div className="flex flex-col gap-1">
+                    <div className="text-xs font-medium text-blue-600 dark:text-blue-400">
+                      Data Analyst Intern @ <span className="font-bold">Systems Ltd.</span>
+                    </div>
+                    <div className="text-xs text-slate-500">
+                      MERN Stack Developer (Independent Projects)
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -186,22 +194,24 @@ export default function Hero() {
                       <span className="text-red-500">name:</span>
                       <span className="text-green-500">"Obaid Saleem"</span>,
                     </div>
-                    <div className="flex items-center gap-2">
-                      <span className="text-red-500">skills:</span>
-                      <span className="text-blue-500">[</span>
-                      <span className="text-green-500">"React"</span>,
-                      <span className="text-green-500">"Node"</span>,
-                      <span className="text-green-500">"Automation"</span>
-
-                      <span className="text-blue-500">]</span>,
+                    <div className="flex flex-col gap-1">
+                      <div className="flex items-center gap-2">
+                        <span className="text-red-500">skills:</span>
+                        <span className="text-blue-500">[</span>
+                      </div>
+                      <div className="ml-6 space-y-1">
+                        <div className="text-green-500">"Data Analytics",</div>
+                        <div className="text-green-500">"Snowflake",</div>
+                        <div className="text-green-500">"Power BI",</div>
+                        <div className="text-green-500">"MERN Stack"</div>
+                      </div>
+                      <div className="text-blue-500">],</div>
                     </div>
-                    <div className="flex items-center gap-2">
-                      <span className="text-red-500">experience:</span>
-                      <span className="text-green-500">"Full-Stack"</span>,
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <span className="text-red-500">passion:</span>
-                      <span className="text-green-500">"Building Solutions"</span>,
+                    <div className="space-y-1">
+                      <div className="flex items-center gap-2">
+                        <span className="text-red-500">experience:</span>
+                        <span className="text-green-500">"Data Analyst @ Systems Ltd"</span>,
+                      </div>
                     </div>
                     <div className="flex items-center gap-2">
                       <span className="text-red-500">hireable:</span>

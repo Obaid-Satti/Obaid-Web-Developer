@@ -14,19 +14,19 @@ export default function About() {
   ];
 
   const technologies = [
+    { name: 'Data Analytics', level: 90, color: 'bg-cyan-500' },
+    { name: 'Snowflake & ETL', level: 85, color: 'bg-blue-600' },
+    { name: 'Power BI', level: 85, color: 'bg-yellow-500' },
     { name: 'React.js', level: 90, color: 'bg-blue-500' },
-    { name: 'API & Automation', level: 90, color: 'bg-orange-500' },
-    { name: 'C# .NET', level: 85, color: 'bg-purple-600' },
-    { name: 'JavaScript', level: 85, color: 'bg-yellow-500' },
-    { name: 'SQL', level: 85, color: 'bg-green-500' },
+    { name: 'SQL & Databases', level: 90, color: 'bg-green-500' },
     { name: 'Node.js', level: 85, color: 'bg-green-600' }
   ];
 
   const timeline = [
-    { year: '2022', title: 'Started Programming Journey', desc: 'Began learning web development technologies' },
-    { year: '2024', title: 'First React.js Project', desc: 'Built interactive web applications' },
+    { year: '2026', title: 'Data Analyst Intern', desc: 'Systems Limited (ETL, Snowflake, Power BI)' },
     { year: '2025', title: 'Full-Stack Internship', desc: 'Gained hands-on industry experience' },
-    { year: '2025', title: 'Certified Developer', desc: 'Earned JavaScript & React certifications' }
+    { year: '2025', title: 'Certified Developer', desc: 'Earned JavaScript & React certifications' },
+    { year: '2024', title: 'First React.js Project', desc: 'Built interactive web applications' }
   ];
 
   return (
@@ -68,14 +68,13 @@ export default function About() {
 
               <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
                 <p>
-                  I'm Obaid Saleem, a passionate MERN stack developer and automation specialist. 
-                  My journey is driven by curiosity and a focus on building efficient, scalable applications.
+                  I'm Obaid Saleem, a Data Analyst with specialized experience at <span className="font-semibold text-slate-900 dark:text-slate-100">Systems Limited</span>—Pakistan's first and top-tier IT conglomerate.
                 </p>
-
                 <p>
-                  I specialize in React.js, Node.js, and MongoDB to deliver dynamic digital solutions. 
-                  Beyond coding, I build intelligent automations using Zapier and custom APIs 
-                  to connect systems, eliminate manual tasks, and streamline operations.
+                  I am also a Full-Stack Developer specializing in the MERN stack for building robust applications.
+                </p>
+                <p className="mt-4">
+                  My focus at Systems Ltd involves executive Dashboards, Snowflake pipelines, and advanced analytics.
                 </p>
 
                 <p>
@@ -149,7 +148,7 @@ export default function About() {
                     <div className="w-full h-full bg-white dark:bg-slate-800 rounded-full overflow-hidden">
                       <ImageWithFallback
                         src={dp}
-                        alt="Obaid Saleem - Full Stack Developer"
+                        alt="Obaid Saleem - Data Analyst"
                         className="w-full h-full object-cover"
                       />
                     </div>
@@ -157,7 +156,10 @@ export default function About() {
                 </div>
 
                 <h3 className="text-2xl font-bold mb-2">Obaid Saleem</h3>
-                <p className="text-muted-foreground mb-6">Full-Stack Developer</p>
+                <div className="mb-6 space-y-1">
+                  <p className="text-blue-600 dark:text-blue-400 font-semibold">Data Analyst @ Systems Ltd</p>
+                  <p className="text-muted-foreground text-sm">Full-Stack Developer</p>
+                </div>
 
                 {/* Social links */}
                 <div className="flex justify-center gap-3">
@@ -213,8 +215,8 @@ export default function About() {
                   <h4 className="font-semibold">Fun Fact</h4>
                 </div>
                 <p className="text-sm text-muted-foreground">
-                  I love exploring new technologies and frameworks! Currently diving
-                  deeper into advanced React patterns and complex workflow automation. ⚡
+                  I enjoy turning complex datasets into clean, actionable insights! Currently diving
+                  deeper into advanced Snowflake optimizations and AI-driven predictive modeling. 📉
                 </p>
               </CardContent>
             </Card>

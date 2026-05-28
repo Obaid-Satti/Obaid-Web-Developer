@@ -89,8 +89,9 @@ export default function Contact() {
           </h2>
           
           <p className="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
-            Ready to bring your next project to life? I'm always excited to discuss new opportunities 
-            and collaborate on innovative solutions.
+            Ready to bring your next data-driven solution to life? 
+            <br />
+            Also seeking collaborations on high-performance MERN stack projects.
           </p>
         </div>
 
@@ -204,7 +205,7 @@ export default function Contact() {
             <CardContent className="p-6">
               <div className="flex items-center gap-3 mb-4">
                 <span className="text-2xl animate-bounce">⚡</span>
-                <h4 className="font-semibold text-">Quick Response</h4>
+                <h4 className="font-semibold text-slate-900 dark:text-white">Quick Response</h4>
               </div>
              <p className="text-black text-sm mb-4">
 
@@ -225,13 +226,13 @@ export default function Contact() {
                 <h4 className="font-semibold text-black">Let's Build Something Amazing</h4>
               </div>
             <p className="text-black text-sm mb-4">
-
-                Whether it's a web application, mobile app, or a complex system, 
-                I'm ready to turn your ideas into reality.
+                I specialize in executive Power BI dashboards and Snowflake pipelines.
+                <br />
+                Additionally, I build robust web applications using the MERN stack.
               </p>
               <div className="flex flex-wrap gap-2">
-                {['React.js', 'C# .NET', 'React Native', 'SQL'].map((tech) => (
-                  <span key={tech} className="px-2 py-1 bg-white/10 rounded-full text-xs text-green">
+                {['Snowflake', 'Power BI', 'React.js', 'SQL Server'].map((tech) => (
+                  <span key={tech} className="px-2 py-1 bg-white/10 rounded-full text-xs text-green-500">
                     {tech}
                   </span>
                 ))}

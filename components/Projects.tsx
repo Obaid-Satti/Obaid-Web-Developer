@@ -9,13 +9,28 @@ export default function Projects() {
   const [hoveredProject, setHoveredProject] = useState<number | null>(null);
 
   const filters = [
-    { id: 'all', name: 'All Projects', count: 9 },
+    { id: 'all', name: 'All Projects', count: 10 },
+    { id: 'data', name: 'Data Analytics', count: 1 },
     { id: 'web', name: 'Web Apps', count: 7 },
     { id: 'mobile', name: 'Mobile', count: 1 },
     { id: 'ai', name: 'AI/ML', count: 1 }
   ];
 
   const projects = [
+    {
+      id: 10,
+      title: 'SuperStore Sales Analysis @ Systems Ltd',
+      description: 'Advanced sales performance analysis and forecasting using Snowflake and Power BI.',
+      longDescription: 'During my internship at Systems Limited in 2026, I led the SuperStore Sales Analysis project. I developed end-to-end data pipelines using ETL/ELT to ingest sales data into Snowflake, performed deep-dive analysis with SQL, and delivered a comprehensive Power BI dashboard for sales forecasting and performance tracking.',
+      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80',
+      category: 'data',
+      technologies: ['Snowflake', 'Power BI', 'ETL/ELT', 'Oracle SQL', 'Excel'],
+      features: ['Sales Forecasting', 'Trend Analysis', 'Inventory Optimization', 'Interactive Dashboards'],
+      github: '#',
+      demo: '#',
+      status: 'Completed',
+      year: '2026'
+    },
     {
       id: 1,
       title: 'Handymen Services Platform',
@@ -198,7 +213,7 @@ export default function Projects() {
           </h2>
 
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed mb-8">
-            A showcase of my development projects across different technologies including React, Node.js, .NET, and more.
+            A showcase of my professional Data Analytics work at Systems Limited alongside full-stack projects in React, Node.js, and Snowflake.
           </p>
           <div className="flex justify-center">
             <Button
